@@ -24,6 +24,7 @@ async def send_stickerprice(message: types.Message):
 @dp.message_handler(commands=['awpprice'])
 async def send_awpprice(message: types.Message):
     await message.answer((awp + ": " + str(market.get_lowest_price(awp, AppID.CSGO)) + " UAH"))
+    await message.delete()
 
 @dp.message_handler()
 async def echo(message: types.Message):
