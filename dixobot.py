@@ -19,11 +19,11 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler(commands=['stickerprice'])
 async def send_help(message: types.Message):
-    await message.reply(sticker + ": " + market.get_lowest_price(sticker, AppID.CSGO) + "UAH")
+    await message.reply(sticker, ": " + market.get_lowest_price(sticker, AppID.CSGO), "UAH")
 
 @dp.message_handler(commands=['awpprice'])
 async def send_help(message: types.Message):
-    await message.reply(awp + ":" + market.get_lowest_price(awp, AppID.CSGO) + "UAH")
+    await message.reply(awp, ":" + market.get_lowest_price(awp, AppID.CSGO), "UAH")
 
 # хэндлер на любое сообщение
 @dp.message_handler()
