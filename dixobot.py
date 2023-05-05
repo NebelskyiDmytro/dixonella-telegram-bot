@@ -28,10 +28,6 @@ async def send_help(message: types.Message):
 # хэндлер на любое сообщение
 @dp.message_handler()
 async def echo(message: types.Message):
-    """
-    Этот хэндлер будет вызываться на любое сообщение от пользователя.
-    Он будет отвечать на сообщение, повторяя его текст.
-    """
     await message.reply(message.text)
 
 # запуск бота
